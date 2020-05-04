@@ -61,6 +61,17 @@ public class Owner extends Person {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
 	private Set<Pet> pets;
+	
+	// change start
+	private int age;
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
 
 	public String getAddress() {
 		return this.address;
@@ -70,6 +81,8 @@ public class Owner extends Person {
 		this.address = address;
 	}
 
+	// change end
+	
 	public String getCity() {
 		return this.city;
 	}
